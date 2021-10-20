@@ -1,0 +1,166 @@
+\documentclass[compress,xcolor=table,aspectratio=169]{beamer}
+% Packages
+\usepackage{moresize} 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{datetime}
+\usepackage{multicol} 
+\usepackage{multirow} 
+\usepackage{booktabs}
+\usepackage{verbatim}
+%\usepackage{natbib}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\usepackage{listings}
+% Python style for highlighting
+\lstset{
+language=Python,
+basicstyle=\scriptsize\tt,
+otherkeywords={self},             % Add keywords here
+%keywordstyle=\ttb\color{deepblue},
+%emph={MyClass,__init__},          % Custom highlighting
+%emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}
+\input{logos/utils.tex}
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+
+% Possible options of the package (add/remove below in \usetheme call):
+%  - nosectionpages: no pages between sections
+%  - flama: use flama font, requires xelatex/lualatex + the font to compile
+%  - compressminiframes: put the heading list bullets indications pages on 1 line
+\usetheme[compressminiframes]{sorbonne}
+
+\newcommand{\titlecaption}[3][]{\caption[#2]{\textbf{#2}\ifthenelse{\equal{#1}{}}{. }{ }#3}}
+
+\title{\Large{\textbf{Deep Natural Language Processing for User Representation}}}
+
+\subtitle{Talk at the Paris NLP Meetup} % optional subtitle
+\date{\formatdate{29}{9}{2021}}
+
+\author{Clara Gainon de Forsan de Gabriac}
+\institute{LIP6 - Sorbonne Université} % Optional
+
+\usepackage[backend=biber,style=authoryear, citestyle=authoryear]{biblatex}
+\bibliography{biblio}
+
+\begin{document}
+
+\begin{frame}[plain]
+	%\titlepage
+	\setcounter{framenumber}{0}
+\end{frame}  
+  
+ 
+ \begin{frame}
+    \frametitle{My Ph.D. in a nutshell}
+        \onslide<1->{
+        \begin{center}
+        \Large
+        Using \textbf{Natural Language Processing} for learning \textbf{versatile} \textbf{User Representations}.
+        \end{center}
+}
+      \begin{columns}
+        \begin{column}{0.5\textwidth}
+
+        \onslide<2->{
+    \begin{block}{In the domains of:}
+         \begin{itemize}
+            \item Recommendation and
+            \item Professional Profile Learning
+        \end{itemize}
+    \end{block}}
+    \end{column}
+        \begin{column}{0.5\textwidth}
+        \onslide<3->{
+            \begin{block}{Key Principles}
+                \begin{itemize}
+                    \item User Profiles
+                    \item Representation Learning
+                    \item Natural Language Processing
+                \end{itemize}
+            \end{block}
+            }
+        \end{column}
+    \end{columns}
+
+\end{frame}
+  
+\begin{section}{Motivations}
+    \begin{frame}{Motivations}
+        \begin{block}{User Representation}
+              \begin{itemize}
+                    \item AI for users (Recommendation, coaching\dots)
+                    \item Richness of profiles
+                    \item Need for Professional Profile Learning
+%                    \item LinkedIn: great playground
+              \end{itemize}
+          \end{block}
+          \begin{block}{Representation Learning}
+          \begin{itemize}
+                \item Trend in Deep Learning
+                \item Increasing need for versatile representations
+          \end{itemize}
+      \end{block}
+      \begin{block}{Natural Language Processing}
+          \begin{itemize}
+              \item User-generated texts = greatly descriptive
+              \item Massive amount of available data
+              \item Text Generation = explainability
+          \end{itemize}
+      \end{block}
+    \end{frame}
+\end{section}
+
+\begin{section}{Approach}
+    \begin{frame}{NLP for User Representation}
+        \onslide<1->{
+            \begin{block}{Recommendation}
+                \begin{itemize}
+                    \item Reviews + ratings  $\rightarrow$ prediction accuracy
+                    \item Attention Mechanism  $\rightarrow$ Explainability
+                \end{itemize}
+            \end{block}
+            }
+        \onslide<2->{
+            \begin{block}{Professional Profile Learning}
+                \begin{itemize}
+                    \item User-generated text $\rightarrow$ build their representation
+                    \item Reminder of the profile $\rightarrow$ evaluation
+                \end{itemize}
+            \end{block}
+            }
+    \end{frame}
+    
+\end{section}
+
+\begin{frame}{Outline}
+    \setbeamertemplate{section in toc}[circle]  
+    \tableofcontents[currentsubsection, 
+    hideothersubsections, 
+    sectionstyle=show, 
+    subsectionstyle=show]
+\end{frame}
+
+
+\input{parts/coria}
+
+\input{parts/resume}
+
+\input{parts/perspectives}
+
+\input{parts/conclusion}
+
+\end{document}

@@ -1,0 +1,16 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{@{}lccccc@{}}
+    \toprule
+     & \multicolumn{5}{c}{\textsc{Bleu} score}                                                        \\ \cmidrule{2-6} 
+                      & \textsc{Bleu}           & \textsc{Bleu}1            & \textsc{Bleu}2             & \textsc{Bleu}3        & \textsc{Bleu}4 \\
+    \midrule
+    %MC       & 0.00      & \textbf{33.3}      & 0.3     & 0.0     & 0.0\\
+     $\text{FT}_{\text{pt}}$ & 1.91 & 20.6 & 3.5 & 0.8 & 0.2 \\
+     $\text{FT}_{\text{CV}}$  & \textbf{2.15} &22.2 & \textbf{3.8} &\textbf{0.9} & \textbf{0.3} \\
+    ELMo              & 1.74                 & \textbf{22.5}                  &  \textbf{3.8}                 &  0.6                 & 0.2                                     \\ \bottomrule
+    \end{tabular}
+    \titlecaption{Experimental results on job generation (title \& description)}{} \label{tab:bleu}
+    \end{table}
